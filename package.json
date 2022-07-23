@@ -1,0 +1,37 @@
+{
+  "name": "my-solution-to-code-problem",
+  "version": "1.0.0",
+  "description": "My solution for a wide bunch of code problems",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/avifenesh/my-solution-to-code-problem.git"
+  },
+  "keywords": [
+    "code",
+    "problem",
+    "node",
+    "js",
+    "linkedList",
+    "permutation",
+    "string",
+    "manipulation",
+    "matrix",
+    "data",
+    "structure",
+    "algorithms",
+    "logic",
+    "solutions",
+    "fun"
+  ],
+  "author": "Avi Fenesh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/avifenesh/my-solution-to-code-problem/issues"
+  },
+  "homepage": "https://github.com/avifenesh/my-solution-to-code-problem#readme"
+}

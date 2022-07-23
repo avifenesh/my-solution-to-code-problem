@@ -20,3 +20,7 @@ function isPerOfPal(str1) {
   if (noneOdd > 1 || (noneOdd === 1 && odd === true)) return false;
   else return true;
 }
+const main = () => {
+  console.log(isPerOfPal("avivai"));
+};
+module.exports = main;

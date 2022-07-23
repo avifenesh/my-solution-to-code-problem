@@ -35,5 +35,8 @@ const isOneChangeForDiff = function (big, small) {
   }
   return true;
 };
+const main = () => {
+  console.log(isOneChange("v", "till"));
+};
 
-console.log(isOneChange("v", "till"));
+module.exports = main;
