@@ -1,3 +1,5 @@
+// Check i a provided string is a permutation of a palindrom
+
 function isPerOfPal(str1) {
   if (str1.length === 0) return true;
   let azArr = new Int32Array(256);

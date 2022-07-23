@@ -1,3 +1,5 @@
+// For a given matrix of nXm, for every cell contain 0 change all the row and column to be 0
+
 const matrix0 = function (mat) {
   console.log(mat);
   if (typeof mat == null) throw err;

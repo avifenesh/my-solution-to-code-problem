@@ -1,3 +1,5 @@
+// Check if one string is a one change diffrent from the another - change might be remove, replace or insert
+
 const isOneChange = function (str1, str2) {
   if (typeof str1 != "string" || typeof str2 != "string") {
     return false;
