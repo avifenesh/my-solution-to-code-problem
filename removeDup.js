@@ -1,39 +1,5 @@
 // For a given unsorted linkedList, remove all the duplicate
-
-class Node {
-  next;
-  val;
-  constructor(val, next = null) {
-    this.next = next;
-    this.val = val;
-  }
-}
-
-class LinkedList {
-  head;
-  constructor(head) {
-    this.head = head;
-  }
-  addNodeToTail(node) {
-    if (node == null) return this.head;
-    let temp = this.head;
-    while (temp.next != null) temp = temp.next;
-    temp.next = node;
-    node.next = null;
-    return this.head;
-  }
-  deleteNode(prevNode) {
-    prevNode.next = prevNode.next.next;
-  }
-  printList() {
-    let node = this.head;
-    while (node != null) {
-      console.log(node);
-      node = node.next;
-    }
-  }
-}
-
+const { Node, LinkedList } = require("./LinkedList");
 const removeDup = (linkedList) => {
   if (linkedList.head == null) return linkedList;
   let node = linkedList.head;
