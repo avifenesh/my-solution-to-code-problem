@@ -6,6 +6,7 @@ const sumLinkedList = require("./sumLinkedList");
 const minStack = require("./MinStack");
 const largestComponent = require("./largestComponentInGraph");
 const minimalIsland = require("./minimalIsland");
+const shortestPath = require("./shortestPath");
 
 matSol();
 isOneChangSol();
@@ -15,3 +16,4 @@ sumLinkedList();
 minStack();
 largestComponent();
 minimalIsland();
+shortestPath();
