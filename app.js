@@ -1,11 +1,13 @@
 const matSol = require("./matrix0");
 const isOneChangSol = require("./isOneChange");
-const isPermotationOfPalindromSol = require("./isPermotationOfPalindrom");
+const isPermutationOfPalindrome = require("./isPermutationOfPalindrome");
 const removeDupSol = require("./removeDup");
 const sumLinkedList = require("./sumLinkedList");
+const minStack = require("./MinStack");
 
 // matSol();
 // isOneChangSol();
-// isPermotationOfPalindromSol();
+// isPermutationOfPalindrome();
 // removeDupSol();
-sumLinkedList();
+// sumLinkedList();
+minStack();
