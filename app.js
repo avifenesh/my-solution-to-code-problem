@@ -5,9 +5,9 @@ const removeDupSol = require("./removeDup");
 const sumLinkedList = require("./sumLinkedList");
 const minStack = require("./MinStack");
 
-// matSol();
-// isOneChangSol();
-// isPermutationOfPalindrome();
-// removeDupSol();
-// sumLinkedList();
+matSol();
+isOneChangSol();
+isPermutationOfPalindrome();
+removeDupSol();
+sumLinkedList();
 minStack();
