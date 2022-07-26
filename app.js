@@ -5,6 +5,7 @@ const removeDupSol = require("./removeDup");
 const sumLinkedList = require("./sumLinkedList");
 const minStack = require("./MinStack");
 const largestComponent = require("./largestComponentInGraph");
+const minimalIsland = require("./minimalIsland");
 
 matSol();
 isOneChangSol();
@@ -13,3 +14,4 @@ removeDupSol();
 sumLinkedList();
 minStack();
 largestComponent();
+minimalIsland();

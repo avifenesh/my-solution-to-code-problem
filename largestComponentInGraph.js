@@ -1,3 +1,5 @@
+// find the largest component of connected nodes in a given graph
+
 const largestComponent = (graph) => {
   const visited = new Set();
   let biggest = 0;
