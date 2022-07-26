@@ -4,6 +4,7 @@ const isPermutationOfPalindrome = require("./isPermutationOfPalindrome");
 const removeDupSol = require("./removeDup");
 const sumLinkedList = require("./sumLinkedList");
 const minStack = require("./MinStack");
+const largestComponent = require("./largestComponentInGraph");
 
 matSol();
 isOneChangSol();
@@ -11,3 +12,4 @@ isPermutationOfPalindrome();
 removeDupSol();
 sumLinkedList();
 minStack();
+largestComponent();
