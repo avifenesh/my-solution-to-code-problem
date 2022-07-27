@@ -1,23 +1,31 @@
+// find the index of a word in a sorted array with empty strings inside
+
 const sparseSearch = (str, arrayOfString) => {
   let right = arrayOfString.length - 1;
   let left = 0;
   let mid = Math.floor(left + right / 2);
-  let rightSearchVal = 0;
-  let leftSearchVal = 0;
+  let move;
   while (left < right) {
-    console.log(mid);
-    if (arrayOfString[mid] == str) return mid;
     if (arrayOfString[mid] == "") {
-      rightSearchVal += sparseSearch(str, arrayOfString.slice(mid));
-      leftSearchVal += sparseSearch(str, arrayOfString.slice(0, mid));
-      if (rightSearchVal != -1) return rightSearchVal + mid;
-      else return leftSearchVal;
-    } else {
+      move = findClosestStr(arrayOfString, mid, 1);
+      if (move === 0) return -1;
+      mid += move;
+    }
+    if (arrayOfString[mid] == str) return mid;
+    else {
       if (str > arrayOfString[mid]) left = mid + 1;
       else right = mid - 1;
+      mid = Math.floor(left + right / 2);
     }
   }
   return -1;
+};
+
+const findClosestStr = (arrayOfString, mid, n) => {
+  if (mid + n >= arrayOfString.length || mid - n < 0) return 0;
+  if (!(arrayOfString[mid + n] === "")) return n;
+  if (!(arrayOfString[mid - n] === "")) return -n;
+  return findClosestStr(arrayOfString, mid, n + 1);
 };
 
 const main = () => {
