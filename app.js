@@ -7,6 +7,7 @@ const minStack = require("./MinStack");
 const largestComponent = require("./largestComponentInGraph");
 const minimalIsland = require("./minimalIsland");
 const shortestPath = require("./shortestPath");
+const sparseSearch = require("./sparseSearch.js");
 
 matSol();
 isOneChangSol();
@@ -17,3 +18,4 @@ minStack();
 largestComponent();
 minimalIsland();
 shortestPath();
+sparseSearch();
