@@ -1,19 +1,19 @@
 // a linked list represent a number, each node represent a digit, the smallest digit is the head, the bigger digit is the tail, for example:
 // 3->5->1 represent 153
-// write a algorithem that add to linked list and return linked list that represent the new number
+// write a algorithm that add to linked list and return linked list that represent the new number
 // you cannot cheat and convert the linked list into a number and then add the numbers
 const { Node, LinkedList } = require("./LinkedList");
 
-// For seing the result visualy
+// For seeing the result visually
 const printList = (linkedList) => {
   let head = linkedList.head;
-  let beutifullString = "";
+  let beautifulString = "";
   while (head != null) {
-    beutifullString += head.val + " -> ";
+    beautifulString += head.val + " -> ";
     head = head.next;
   }
-  beutifullString += "null";
-  console.log(beutifullString);
+  beautifulString += "null";
+  console.log(beautifulString);
 };
 
 // if we left with carry and one of the list are bigger then the other one, we add digits to the new list till the new digit smaller then 10
@@ -61,11 +61,11 @@ const sumLinkedList = (head1, head2) => {
     }
     return newLinkedList;
   }
-  // if list2 bigger then list1 and we remaind with a carry
+  // if list2 bigger then list1 and we remains with a carry
   if (carry == true) {
     addTillCarryFalse(node2, newLinkedList);
   }
-  //list 2 bigger then list 1 and we dont have a carry left
+  //list 2 bigger then list 1 and we don't have a carry left
   newLinkedList.addNodeToTail(node2);
   return newLinkedList;
 };
