@@ -12,6 +12,7 @@ const specialQueue = require("./queueViaStack");
 const listOfDepth = require("./listOfDepth");
 const isBalanced = require("./isBalanced");
 const checkBst = require("./checkBst");
+const findMutualParent = require("./firstMutualParent");
 
 matSol();
 isOneChangSol();
@@ -27,3 +28,4 @@ specialQueue();
 listOfDepth();
 isBalanced();
 checkBst();
+findMutualParent();
