@@ -11,25 +11,32 @@ class EmployFactory {
     Manager: Manager,
     Respondent: Respondent,
   };
+
   createEmploy(name, id, type, CallCenter = null) {
     return new this.types[type](name, id, type, CallCenter);
   }
 }
+
 class Employ {
   name;
   id;
   type;
+
   constructor(name, id, type) {
     this.name = name;
     this.id = id;
     this.type = type;
   }
+
   getInformation() {
     return `name: ${this.name}, id: ${this.id}, type: ${this.type}`;
   }
 }
+
 class Respondent extends Employ {}
+
 class Manager extends Employ {}
+
 class Director extends Employ {
   isAvailable;
   CallCenter;
@@ -38,10 +45,12 @@ class Director extends Employ {
     this.CallCenter = CallCenter;
     this.isAvailable = true;
   }
+
   getInformation() {
     return super.getInformation() + `call center: ${this.CallCenter}`;
   }
 }
+
 class CallCenter {
   employMap = new Map();
   availableRespondentsQueue = [];
@@ -59,6 +68,7 @@ class CallCenter {
     }
     this.addEmploys(employs);
   }
+
   addEmploys(employs) {
     for (let employ of employs) {
       this.employMap.set(employ.id, employ);
@@ -68,6 +78,7 @@ class CallCenter {
       else this.Director = employ;
     }
   }
+
   dispatchCall(Call) {
     let freeEmploy;
     if (this.availableRespondentsQueue.length > 0) {
@@ -82,9 +93,11 @@ class CallCenter {
     }
     this.activeCall.set(freeEmploy.id, Call);
   }
+
   addToWaitingCall(Call) {
     this.waitingCallQueue.unshift(Call);
   }
+
   callEnded(employId, recap) {
     const employ = this.employMap.get(employId);
     const call = this.activeCall.get(employId);
@@ -98,12 +111,14 @@ class CallCenter {
       this.returnToAvailability(employ);
     }
   }
+
   returnToAvailability(employ) {
     if (employ.type == "Manager") this.availableManagerQueue.unshift(employ);
     else if (employ.type == "Respondent")
       this.availableRespondentsQueue.unshift(employ);
     else employ.isAvailable = true;
   }
+
   saveCallDetails(employ, call) {
     const employInformation = employ.getInformation();
     const callInformation = call.getInformation();
@@ -114,6 +129,7 @@ class CallCenter {
     );
   }
 }
+
 class Call {
   id;
   costumerName;
