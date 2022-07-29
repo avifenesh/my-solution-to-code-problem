@@ -10,6 +10,7 @@ const shortestPath = require("./shortestPath");
 const sparseSearch = require("./sparseSearch.js");
 const specialQueue = require("./queueViaStack");
 const listOfDepth = require("./listOfDepth");
+const isBalanced = require("./isBalanced");
 
 matSol();
 isOneChangSol();
@@ -23,3 +24,4 @@ shortestPath();
 sparseSearch();
 specialQueue();
 listOfDepth();
+isBalanced();
