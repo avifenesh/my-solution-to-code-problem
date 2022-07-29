@@ -11,6 +11,7 @@ const sparseSearch = require("./sparseSearch.js");
 const specialQueue = require("./queueViaStack");
 const listOfDepth = require("./listOfDepth");
 const isBalanced = require("./isBalanced");
+const checkBst = require("./checkBst");
 
 matSol();
 isOneChangSol();
@@ -25,3 +26,4 @@ sparseSearch();
 specialQueue();
 listOfDepth();
 isBalanced();
+checkBst();
