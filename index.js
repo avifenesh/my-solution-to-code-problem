@@ -1,6 +1,6 @@
 const matSol = require("./treesGraphsAndHeaps/matrix0");
 const isOneChangSol = require("./stringsAndArrays/isOneChange");
-const isPermutationOfPalindrome = require("./isPermutationOfPalindrome");
+const isPermutationOfPalindrome = require("./stringsAndArrays/isPermutationOfPalindrome");
 const removeDupSol = require("./linkedList/removeDup");
 const sumLinkedList = require("./linkedList/sumLinkedList");
 const minStack = require("./queueAndStacks/MinStack");
@@ -11,9 +11,10 @@ const sparseSearch = require("./stringsAndArrays/sparseSearch.js");
 const specialQueue = require("./queueAndStacks/queueViaStack");
 const listOfDepth = require("./treesGraphsAndHeaps/listOfDepth");
 const isBalanced = require("./treesGraphsAndHeaps/isBalanced");
-const checkBst = require("./BinarySearchTree/checkBst");
+const checkBst = require("./treesGraphsAndHeaps/checkBst");
 const findMutualParent = require("./treesGraphsAndHeaps/firstMutualParent");
 const CallCenter = require("./OOP/CallCenter");
+const Minesweeper = require("./OOP/Minesweeper");
 
 matSol();
 isOneChangSol();
@@ -31,3 +32,4 @@ isBalanced();
 checkBst();
 findMutualParent();
 CallCenter();
+Minesweeper();

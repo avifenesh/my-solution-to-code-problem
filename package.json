@@ -2,9 +2,9 @@
   "name": "my-solution-to-code-problem",
   "version": "1.0.0",
   "description": "My solution for a wide bunch of code problems",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
-    "start": "node app.js",
+    "start": "node index.js",
     "test": "test"
   },
   "repository": {
@@ -35,6 +35,10 @@
   },
   "homepage": "https://github.com/avifenesh/my-solution-to-code-problem#readme",
   "dependencies": {
-    "fs": "0.0.1-security"
+    "chalk": "^5.0.1",
+    "commander": "^9.4.0",
+    "conf": "^10.2.0",
+    "fs": "0.0.1-security",
+    "prompt": "^1.3.0"
   }
 }
