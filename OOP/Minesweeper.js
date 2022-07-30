@@ -14,7 +14,7 @@ class Panel {
   type;
   x;
   y;
-  constructor(type = null, x, y) {
+  constructor(x, y, type = null) {
     this.type = type;
     this.x = x;
     this.y = y;
@@ -30,7 +30,7 @@ class Panel {
     return false;
   }
   toBomb() {
-    return new BombPAnel(BombPAnel, this.x, this.y);
+    return new BombPAnel(this.x, this.y, BombPAnel);
   }
   toNumerical() {
     if (this.type == NumericalPAnel) {
@@ -66,33 +66,35 @@ class EmptyPanel extends Panel {
     for (let j = -1; j < 2; j++) {
       board[this.y - j] &&
       board[this.y - j][this.x + 1] &&
-      board[this.y - j][this.x + 1].type !== BombPAnel
-        ? (board[this.y - j][this.x + 1] =
-            board[this.y - j][this.x + 1].click(board))
+      board[this.y - j][this.x + 1].type !== BombPAnel &&
+      !board[this.y - j][this.x + 1].clicked
+        ? board[this.y - j][this.x + 1].click(board)
         : null;
       board[this.y + j] &&
       board[this.y + j][this.x - 1] &&
-      board[this.y + j][this.x - 1].type !== BombPAnel
-        ? (board[this.y + j][this.x - 1] =
-            board[this.y + j][this.x - 1].click(board))
+      board[this.y + j][this.x - 1].type !== BombPAnel &&
+      !board[this.y + j][this.x - 1].clicked
+        ? board[this.y + j][this.x - 1].click(board)
         : null;
     }
     board[this.y + 1] &&
     board[this.y + 1][this.x] &&
-    board[this.y + 1][this.x].type !== BombPAnel
-      ? (board[this.y + 1][this.x] = board[this.y + 1][this.x].click(board))
+    board[this.y + 1][this.x].type !== BombPAnel &&
+    !board[this.y + 1][this.x].clicked
+      ? board[this.y + 1][this.x].click(board)
       : null;
     board[this.y - 1] &&
-    board[vy - 1][this.x] &&
+    board[this.y - 1][this.x] &&
+    !board[this.y - 1][this.x].clicked &&
     board[this.y - 1][this.x].type !== BombPAnel
-      ? (board[this.y - 1][this.x] = board[this.y - 1][this.x].click(board))
+      ? board[this.y - 1][this.x].click(board)
       : null;
   }
 }
 class NumericalPAnel extends Panel {
   val;
   constructor(type, x, y, val) {
-    super(type, x, y);
+    super(x, y, type);
     this.val = val;
   }
   isNumerical() {
@@ -121,7 +123,7 @@ class Board {
       .map(() => Array(m).fill());
     for (let i = 0; i < n; i++) {
       for (let j = 0; j < m; j++) {
-        this.board[i][j] = new EmptyPanel();
+        this.board[i][j] = new EmptyPanel(i, j);
       }
     }
     let x, y;
