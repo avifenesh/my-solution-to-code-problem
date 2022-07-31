@@ -15,6 +15,8 @@ const checkBst = require("./treesGraphsAndHeaps/checkBst");
 const findMutualParent = require("./treesGraphsAndHeaps/firstMutualParent");
 const CallCenter = require("./OOP/CallCenter");
 const Minesweeper = require("./OOP/Minesweeper");
+const tripleSteps = require("./recursionAndDynamicPrograming/tripleSteps");
+const robotInAGrid = require("./recursionAndDynamicPrograming/robotInAGrid");
 
 matSol();
 isOneChangSol();
@@ -33,3 +35,5 @@ checkBst();
 findMutualParent();
 CallCenter();
 Minesweeper();
+tripleSteps();
+robotInAGrid();
