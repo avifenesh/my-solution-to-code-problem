@@ -17,6 +17,7 @@ const CallCenter = require("./OOP/CallCenter");
 const Minesweeper = require("./OOP/Minesweeper");
 const tripleSteps = require("./recursionAndDynamicPrograming/tripleSteps");
 const robotInAGrid = require("./recursionAndDynamicPrograming/robotInAGrid");
+const twoSortedArray = require("./sortingProblems/twoSortedArray");
 
 matSol();
 isOneChangSol();
@@ -37,3 +38,4 @@ CallCenter();
 Minesweeper();
 tripleSteps();
 robotInAGrid();
+twoSortedArray();
