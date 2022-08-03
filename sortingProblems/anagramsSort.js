@@ -29,26 +29,23 @@ const abcMap = {
 };
 
 const anagramSort = (stringsArray) => {
-  const helper = [];
-  let c = 1;
   let temp1;
-  let temp2;
-  for (string of stringsArray) {
-    helper.push(bucketStringsSort(string));
-  }
-  for (let i = 0; i < stringsArray.length; i++) {
-    for (let j = c; j < stringsArray.length; j++) {
-      if (helper[i] == helper[j]) {
-        temp1 = helper[i + 1];
-        temp2 = stringsArray[i + 1];
-        helper[i + 1] = helper[j];
-        stringsArray[i + 1] = stringsArray[j];
-        stringsArray[j] = temp2;
-        helper[j] = temp1;
-        break;
-      }
+  let i = 0;
+  let tempArr = [];
+  const mapOfOrderedStrings = new Map();
+  for (let string of stringsArray) {
+    temp1 = bucketStringsSort(string);
+    if (!mapOfOrderedStrings.has(temp1)) {
+      mapOfOrderedStrings.set(temp1, []);
     }
-    c++;
+    tempArr = mapOfOrderedStrings.get(temp1);
+    tempArr.push(string);
+  }
+  for (anagramsArray of mapOfOrderedStrings.values()) {
+    for (string of anagramsArray) {
+      stringsArray[i] = string;
+      i++;
+    }
   }
   return stringsArray;
 };
