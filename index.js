@@ -18,6 +18,7 @@ const Minesweeper = require("./OOP/Minesweeper");
 const tripleSteps = require("./recursionAndDynamicPrograming/tripleSteps");
 const robotInAGrid = require("./recursionAndDynamicPrograming/robotInAGrid");
 const twoSortedArray = require("./sortingProblems/twoSortedArray");
+const anagramsSort = require("./sortingProblems/anagramsSort");
 
 matSol();
 isOneChangSol();
@@ -39,3 +40,4 @@ Minesweeper();
 tripleSteps();
 robotInAGrid();
 twoSortedArray();
+anagramsSort();
