@@ -19,6 +19,7 @@ const tripleSteps = require("./recursionAndDynamicPrograming/tripleSteps");
 const robotInAGrid = require("./recursionAndDynamicPrograming/robotInAGrid");
 const twoSortedArray = require("./sortingProblems/twoSortedArray");
 const anagramsSort = require("./sortingProblems/anagramsSort");
+const kRotatedArray = require("./sortingProblems/kRotatedArray");
 
 matSol();
 isOneChangSol();
@@ -41,3 +42,4 @@ tripleSteps();
 robotInAGrid();
 twoSortedArray();
 anagramsSort();
+kRotatedArray();
