@@ -23,6 +23,7 @@ const kRotatedArray = require("./sortingProblems/kRotatedArray");
 const numberSwapper = require("./moderate/numberSwapper");
 const wordFrequency = require("./moderate/wordFrequency");
 const ticTackWin = require("./moderate/ticTackWin");
+const factorialZeros = require("./moderate/factorialZeros");
 
 matSol();
 isOneChangSol();
@@ -49,3 +50,4 @@ kRotatedArray();
 numberSwapper();
 wordFrequency();
 ticTackWin();
+factorialZeros();
