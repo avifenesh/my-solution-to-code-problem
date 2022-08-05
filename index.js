@@ -20,6 +20,8 @@ const robotInAGrid = require("./recursionAndDynamicPrograming/robotInAGrid");
 const twoSortedArray = require("./sortingProblems/twoSortedArray");
 const anagramsSort = require("./sortingProblems/anagramsSort");
 const kRotatedArray = require("./sortingProblems/kRotatedArray");
+const numberSwapper = require("./moderate/numberSwapper");
+const wordFrequency = require("./moderate/wordFrequency");
 
 matSol();
 isOneChangSol();
@@ -43,3 +45,5 @@ robotInAGrid();
 twoSortedArray();
 anagramsSort();
 kRotatedArray();
+numberSwapper();
+wordFrequency();
